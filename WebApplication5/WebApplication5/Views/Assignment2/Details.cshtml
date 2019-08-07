@@ -1,0 +1,50 @@
+﻿@using WebApplication5.Models;
+@{
+    ViewBag.Title = "Details";
+}
+
+@*Displaying Employees Details With Id And Name*@
+<h2>Employee Details</h2>
+<table class="table table-bordered table-responsive">
+    <tr class="bg-dark text-white">
+        <td>
+            EmployeeID:
+        </td>
+        <td>
+            @Model.id
+        </td>
+    </tr>
+    <tr class="bg-dark text-white">
+        <td>
+            EmployeeName:
+        </td>
+        <td>
+            @Model.Name
+        </td>
+    </tr>
+    <tr class="bg-dark text-white">
+        <td>
+            Employee Gender:
+        </td>
+        <td>
+            @Model.Gender
+        </td>
+    </tr>
+    <tr class="bg-dark text-white">
+        <td>
+            Employee City:
+        </td>
+        <td>
+            @Model.City
+        </td>
+    </tr>
+    <tr class="bg-dark text-white">
+        <td>
+            Employee DOB:
+        </td>
+        <td>
+            @Model.DOB
+        </td>
+    </tr>
+</table>
+@Html.ActionLink("Back to List", "Index", new { id = Model.id }, new { @class = "btn btn-info" })

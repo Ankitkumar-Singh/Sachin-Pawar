@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WebApplication5.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+<h3>Assignment 5. Create an Application to do Crud Operations using EntityFramework in MVC</h3>
+<h2 class="text-center text-info">Add New Employee</h2>
+
+<button class="btn btn-toolbar"> @Html.ActionLink("Add New Employee", "Create") </button>
+@*Showing The All EMployees With Their Details*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOB)
+        </th>
+        <th></th>
+    </tr>
+    @*Showing The All EMployees With Their Details Using foreach Loop*@
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOB)
+            </td>
+            <td>
+                @Html.ActionLink("Edit Record", "Edit", new { id = item.id }, new { @class = "btn btn-info" })
+
+                @Html.ActionLink("View Details", "Details", new { id = item.id }, new { @class = "btn btn-info" })
+
+                @Html.ActionLink("Delete Record", "Delete", new { id = item.id }, new { @class = "btn btn-danger" })
+
+            </td>
+        </tr>
+    }
+</table>

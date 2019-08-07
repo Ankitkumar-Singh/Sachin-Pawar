@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebApplication5.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>Assignment 4. Create an Application that will perform CRUD operations using ADO.Net Data Objects in MVC</h3>
+
+<h2 class="text-center text-info">All Employees Details</h2>
+<button class="btn btn-toolbar"> @Html.ActionLink("Add New Employee", "Create") </button>
+@*Showing all employees details using table*@
+<table class="table table-bordered ">
+    <tr class="bg-dark text-white">
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOB)
+        </th>
+        <th>Actions</th>
+    </tr>
+
+    @* foreach loop is used to show every employees details *@
+    @foreach (var item in Model)
+    {
+        using (Html.BeginForm("Delete", "Assignment4", new { id = item.id }))
+        {
+            <tr class="bg-dark text-white">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DOB)
+                </td>
+                <td>
+                    @*Edit Button used with for editing the employees record*@
+                    @Html.ActionLink("Edit Record", "Edit", new { id = item.id }, new { @class = "btn btn-info" })
+
+                    @*Delete Button used with confirmation before deleting the employees record*@
+                    <input type="submit" class="btn btn-danger" value="Delete Record" onclick="return confirm('Are you sure you want to delete record with ID = @item.id');" />
+                </td>
+            </tr>
+        }
+    }
+</table>
