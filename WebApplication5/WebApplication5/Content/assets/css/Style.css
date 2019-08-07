@@ -85,3 +85,7 @@ a {
     color: royalblue;
     text-decoration: none;
 }
+.container-fluid > li > a 
+{
+    color: white;
+}
