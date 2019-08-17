@@ -46,7 +46,7 @@
                 </td>
                 <td>
                     @*Edit Button used with for editing the employees record*@
-                    @Html.ActionLink("Edit Record", "Edit", new { id = item.id }, new { @class = "btn btn-info" })
+                    @Html.ActionLink("Edit Record", "Edit", new { id = item.id }, new { @class = "btn btn-primary" })
 
                     @*Delete Button used with confirmation before deleting the employees record*@
                     <input type="submit" class="btn btn-danger" value="Delete Record" onclick="return confirm('Are you sure you want to delete record with ID = @item.id');" />

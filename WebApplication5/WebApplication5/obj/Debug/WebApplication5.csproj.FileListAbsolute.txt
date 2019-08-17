@@ -378,6 +378,8 @@ D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\EntityFramew
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\Microsoft.Web.Infrastructure.dll
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\Newtonsoft.Json.dll
+D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\PagedList.dll
+D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\PagedList.Mvc.dll
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\System.Web.Helpers.dll
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\System.Web.Mvc.dll
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\System.Web.Optimization.dll
@@ -390,6 +392,8 @@ D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\EntityFramew
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\EntityFramework.SqlServer.xml
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\Newtonsoft.Json.xml
+D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\PagedList.xml
+D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\PagedList.Mvc.xml
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\System.Web.Helpers.xml
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\System.Web.Mvc.xml
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\System.Web.Razor.xml
@@ -398,8 +402,8 @@ D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\System.Web.W
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\System.Web.WebPages.Razor.xml
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\System.Web.Optimization.xml
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\Antlr3.Runtime.pdb
-D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\obj\Debug\WebApplication5.csprojAssemblyReference.cache
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\obj\Debug\WebApplication5.csproj.CoreCompileInputs.cache
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\obj\Debug\WebApplication5.csproj.CopyComplete
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\obj\Debug\WebApplication5.dll
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\obj\Debug\WebApplication5.pdb
+D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\obj\Debug\WebApplication5.csprojAssemblyReference.cache
