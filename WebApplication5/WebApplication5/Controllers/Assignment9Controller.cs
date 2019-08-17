@@ -37,7 +37,6 @@ namespace WebApplication5.Controllers
             }
             else if(searchBy == "TotalEmployee")
             {
-                //dept = db.DepartmentNewTables.Where(x => x.TotalEmployee.Equals(search));
                 dept = db.DepartmentNewTables.Where(x => x.TotalEmployee.ToString().StartsWith(search));
             }
             else
