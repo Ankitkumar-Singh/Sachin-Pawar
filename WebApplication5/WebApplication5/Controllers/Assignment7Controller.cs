@@ -81,42 +81,7 @@ namespace WebApplication5.Controllers
             return View(comment);
         }
         #endregion
-
-        #region "Edit Action Method HttpGet"
-        // Edit Action Method HttpGet GET: Assignment7/Edit/5
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Comment comment = db.Commentsc.Find(id);
-            if (comment == null)
-            {
-                return HttpNotFound();
-            }
-            return View(comment);
-        }
-        #endregion
-
-        #region " Edit Action Method  HttpPost"
-        // Edit Action Method  HTTPPOST: Assignment7/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Comments")] Comment comment)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(comment).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(comment);
-        }
-        #endregion
-
+                
         #region "Delete Action Method HttpGet"      
         //Delete Action Method HttpGet GET: Assignment7/Delete/5
         public ActionResult Delete(int? id)

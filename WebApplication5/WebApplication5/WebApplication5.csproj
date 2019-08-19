@@ -242,7 +242,6 @@
     <Content Include="Views\Assignment6\Index.cshtml" />
     <Content Include="Views\Assignment7\Delete.cshtml" />
     <Content Include="Views\Assignment7\Details.cshtml" />
-    <Content Include="Views\Assignment7\Edit.cshtml" />
     <Content Include="Views\Assignment7\Index.cshtml" />
     <Content Include="Views\Assignment7\Create.cshtml" />
     <Content Include="Views\Assignment9\Index.cshtml" />
