@@ -1,6 +1,5 @@
 ﻿using PagedList;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web.Mvc;
@@ -13,9 +12,9 @@ namespace WebApplication5.Controllers
         //DepartmentNewDataModel object is created
         private DepartmentNewDataModel db = new DepartmentNewDataModel();
 
-        #region "Index Action Method [HttpGet]"        
+        #region "Index Action Method"        
         /// <summary>
-        /// Index Action Method Contains Search,Sort And Pagination Functionality
+        /// Index Action Method Contains Search,Sort And Pagination FunctioNALITY
         /// </summary>
         /// <param name="searchBy"></param>
         /// <param name="search"></param>
@@ -37,7 +36,7 @@ namespace WebApplication5.Controllers
             {
                 dept = (db.DepartmentNewTables.Where(x => x.Location == search || search == null));
             }
-            else if (searchBy == "TotalEmployee")
+            else if(searchBy == "TotalEmployee")
             {
                 dept = db.DepartmentNewTables.Where(x => x.TotalEmployee.ToString().StartsWith(search));
             }
@@ -61,33 +60,33 @@ namespace WebApplication5.Controllers
                     break;
             }
 
-            return View(dept.ToPagedList(page ?? 1, 4));
+           return View(dept.ToPagedList(page ?? 1, 4))  ;
 
         }
         #endregion
 
-        #region "Index Action Method [HttpPost]"
-        /// <summary>
-        /// Index action method [HttpPost] to delete multiple records using selected checkboxes.
-        /// </summary>
-        /// <param name="employeeIdsToDelete"></param>
-        /// <returns></returns>
         [HttpPost]
-        public ActionResult Index(IEnumerable<int> employeeIdsToDelete)
+        public ActionResult Index(int[] deleteIds)
         {
-            foreach (var item in employeeIdsToDelete)
+            using (DepartmentNewDataModel db = new DepartmentNewDataModel() )
             {
-                var delete = db.DepartmentNewTables.FirstOrDefault(s => s.Dept_Id == item);
-                if (delete != null)
+                foreach (var id in deleteIds)
                 {
-                    db.DepartmentNewTables.Remove(delete);
+                    DepartmentNewTable table = (from c in db.DepartmentNewTables
+                                         where c.Dept_Id == id
+                                         select c).FirstOrDefault();
+                    db.DepartmentNewTables.Remove(table);
                 }
+                db.SaveChanges();
             }
 
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            return new EmptyResult();
         }
-        #endregion
+
+
+
+
+
 
         #region "Dispose Method"       
         /// <summary>

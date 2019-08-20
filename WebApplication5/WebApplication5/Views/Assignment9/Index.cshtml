@@ -1,9 +1,10 @@
 ﻿@model IPagedList<WebApplication5.Models.DepartmentNewTable>
 @using PagedList.Mvc;
 @using PagedList;
-
 @{
     ViewBag.Title = "Index";
+    WebGrid webGrid = new WebGrid(source: Model, canPage: false, canSort: false);
+
 }
 
 <h3>Assignment 9. Implement a module to allow Search Sort with Pagination on Departments List</h3>
@@ -11,7 +12,7 @@
     Implement a module to allow Search Sort with Pagination on Departments List. Apply search and Sort for following fields:
     <br> 1. Department Name,<br> 2. Department Location<br> 3. Employee Count
 </p>
-@*Form Contains Radio Buttons and TextBox for Search Functionality*@
+@*Form Contains Radio Buttons and TextBox for Search and Sort Functionality*@
 @using (@Html.BeginForm("Index", "Assignment9", FormMethod.Get))
 {
     <section class="radiobuttons text-info">
@@ -21,62 +22,79 @@
         @Html.RadioButton("searchBy", "TotalEmployee") Employee Count
         <br>
         <p>
-            @Html.TextBox("search") <input type="submit" value="search" />
+            @Html.TextBox("search") &nbsp;&nbsp;<input type="submit" value="search" class="btn btn-info" />
         </p>
     </section>
 }
-<table class="table table-bordered">
-    <tr class="bg-dark text-white">
-        <th>
-            @Html.ActionLink("Dept_Id", "Index", new { sortBy = ViewBag.SortIdParameter })
-        </th>
-        <th>
-            @Html.ActionLink("Dept_Name", "Index", new { sortBy = ViewBag.SortNameParameter, searchBy = Request["searchBy"], search = Request["search"] })
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().Dept_Details)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().TotalEmployee)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().Location)
-        </th>
-    </tr>
-    @*If their is no any single row is selected then message is displayed*@
-    @if (Model.Count() == 0)
-    {
-        <tr>
-            <td colspan="4">
-                No records match search criteria
-            </td>
+@* Form for Deleting the selected departments using checkboxex  *@
+@using (Html.BeginForm("Index", "Assignment9", FormMethod.Post))
+{
+    <table class="table table-bordered">
+        <tr class="bg-dark text-white">
+            <th>
+                <input type="checkbox" id="checkAll" /> Select All
+            </th>
+            <th>
+                @Html.ActionLink("Dept_Id", "Index", new { sortBy = ViewBag.SortIdParameter })
+            </th>
+            <th>
+                @Html.ActionLink("Dept_Name", "Index", new { sortBy = ViewBag.SortNameParameter, searchBy = Request["searchBy"], search = Request["search"] })
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Dept_Details)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().TotalEmployee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Location)
+            </th>
         </tr>
-    }
-    @* Showing the selected row*@
-    else
-    {
-        foreach (var item in Model)
+        @*If their is no any single row is selected then message is displayed*@
+        @if (Model.Count() == 0)
         {
-            <tr class="bg-dark text-white">
-                <td>
-                    @Html.DisplayFor(modelItem => item.Dept_Id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Dept_Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Dept_Details)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TotalEmployee)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Location)
+            <tr>
+                <td colspan="4">
+                    No records match search criteria
                 </td>
             </tr>
         }
-    }
-</table>
+        @* Showing the selected row*@
+        else
+        {
+            foreach (var item in Model)
+            {
+                <tr class="bg-dark text-white">
 
+                    <td>
+                        <input type="checkbox" name="employeeIdsToDelete" id="employeeIdsToDelete" value="@item.Dept_Id" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dept_Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dept_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dept_Details)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalEmployee)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Location)
+                    </td>
+                </tr>
+            }
+        }
+        <tbody>
+            @Html.EditorForModel()
+        </tbody>
+    </table>
+    <input type="submit" id="btnSubmit" value="Delete selected employees" class="btn btn-danger" />
+}
 @* Pagination is displayed *@
 @Html.PagedListPager(Model, page => Url.Action("Index", new { page, searchBy = Request.QueryString["searchBy"], search = Request.QueryString["search"], sortBy = Request["sortBy"] }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayItemSliceAndTotal = true })
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/assets/js/DeleteConfirmationAlert.js"></script>

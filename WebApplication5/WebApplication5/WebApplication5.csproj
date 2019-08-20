@@ -163,6 +163,7 @@
     <Content Include="Content\assets\css\jquery-ui.css" />
     <Content Include="Content\assets\js\bootstrap.js" />
     <Content Include="Content\assets\js\bootstrap.min.js" />
+    <Content Include="Content\assets\js\DeleteConfirmationAlert.js" />
     <Content Include="Content\assets\js\html5.js" />
     <Content Include="Content\assets\js\JavaScript.js" />
     <Content Include="Content\assets\js\jquery-3.4.1.min.js" />
@@ -256,9 +257,6 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

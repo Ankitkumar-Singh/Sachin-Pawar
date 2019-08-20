@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="~/Content/assets/css/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/assets/css/Style.css" rel="stylesheet" />
+    <script src="~/Content/assets/js/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -29,10 +33,10 @@
                         <li>@Html.ActionLink("Assignment 3", "Index", "Assignment3")</li>
                         <li>@Html.ActionLink("Assignment 4", "Index", "Assignment4")</li>
                         <li>@Html.ActionLink("Assignment 5", "Index", "Assignment5")</li>
-                        <li>@Html.ActionLink("Assignment 6", "Index", "Assignment6")</li>
                         <li>@Html.ActionLink("Assignment 7", "Index", "Assignment7")</li>
                         <li>@Html.ActionLink("Assignment 8", "Index", "Assignment8")</li>
-                        <li>@Html.ActionLink("Assignment 9", "Index", "Assignment9")</li>
+                        <li>@Html.ActionLink("Assignment 9+10", "Index", "Assignment9")</li>
+                        @*<li>@Html.ActionLink("Assignment11", "Index", "Assignment11")</li>*@
                     </ul>
                 </div>
             </div>
@@ -47,7 +51,7 @@
     @RenderSection("scripts", required: false)
     @*Main Footer*@
     <div class="mainfooter">
-            <p class="text-center">&copy; @DateTime.Now.Year - ASP.NET MVC Aress Training June 2019</p>   
+        <p class="text-center">&copy; @DateTime.Now.Year - ASP.NET MVC Aress Training June 2019</p>
     </div>
 </body>
 </html>
