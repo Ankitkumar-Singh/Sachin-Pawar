@@ -34,7 +34,6 @@ namespace WebApplication5.Models
 
         [Required(ErrorMessage = "Hire Date is required")]
         [Display(Name = "Hire Date")]        
-        [Range(typeof(DateTime), "01/01/2000", "01/01/2010")]
         [DisplayFormat(DataFormatString = "{0:d}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> HireDate { get; set; }
     }
