@@ -123,11 +123,22 @@
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.abstractions.2.0.3\lib\net35\xunit.abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.4.1\lib\net452\xunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.execution.2.4.1\lib\net452\xunit.execution.desktop.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Common\RemoteClientServer.cs" />
+    <Compile Include="Controllers\Assignment11Controller.cs" />
     <Compile Include="Controllers\Assignment2Controller.cs" />
     <Compile Include="Controllers\Assignment3Controller.cs" />
     <Compile Include="Controllers\Assignment4Controller.cs" />
@@ -140,6 +151,24 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\A11.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>A11.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\A11.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>A11.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\A11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>A11.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Ass11Emp.cs">
+      <DependentUpon>A11.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Comments.cs" />
@@ -177,6 +206,16 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\A11.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>A11.edmx</DependentUpon>
+      <LastGenOutput>A11.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\A11.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>A11.edmx</DependentUpon>
+      <LastGenOutput>A11.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
@@ -185,6 +224,13 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
+    <EntityDeploy Include="Models\A11.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>A11.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\A11.edmx.diagram">
+      <DependentUpon>A11.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -247,6 +293,9 @@
     <Content Include="Views\Assignment7\Create.cshtml" />
     <Content Include="Views\Assignment9\Index.cshtml" />
     <Content Include="Views\Assignment8\Index.cshtml" />
+    <Content Include="Views\Assignment11\Create.cshtml" />
+    <Content Include="Views\Assignment11\Delete.cshtml" />
+    <Content Include="Views\Assignment11\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

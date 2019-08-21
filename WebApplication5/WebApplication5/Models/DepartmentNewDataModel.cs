@@ -1,6 +1,5 @@
 namespace WebApplication5.Models
 {
-    using System.Collections.Generic;
     using System.Data.Entity;
 
     #region "DepartmentNewDataModel Partial Class"
@@ -24,6 +23,7 @@ namespace WebApplication5.Models
                 .IsUnicode(false);
         }
 
+        public System.Data.Entity.DbSet<WebApplication5.Models.Ass11Emp> Ass11Emp { get; set; }
     }
     #endregion
 }

@@ -402,8 +402,14 @@ D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\System.Web.W
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\System.Web.WebPages.Razor.xml
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\System.Web.Optimization.xml
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\Antlr3.Runtime.pdb
-D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\obj\Debug\WebApplication5.csprojAssemblyReference.cache
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\obj\Debug\WebApplication5.csproj.CoreCompileInputs.cache
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\obj\Debug\WebApplication5.csproj.CopyComplete
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\obj\Debug\WebApplication5.dll
 D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\obj\Debug\WebApplication5.pdb
+D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\obj\Debug\WebApplication5.csprojAssemblyReference.cache
+D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\xunit.abstractions.dll
+D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\xunit.core.dll
+D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\xunit.execution.desktop.dll
+D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\xunit.abstractions.xml
+D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\xunit.core.xml
+D:\ASP.NET MVC\GIT\Sachin-Pawar\WebApplication5\WebApplication5\bin\xunit.execution.desktop.xml
